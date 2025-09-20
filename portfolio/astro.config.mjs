@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://kurcolml.github.io',
+  site: 'https://kurcolml.github.io', 
+  
   base: '/portfolio/'      
 });
