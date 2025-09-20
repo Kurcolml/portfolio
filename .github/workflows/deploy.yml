@@ -3,7 +3,7 @@ name: Deploy Astro to GitHub Pages
 on:
   push:
     branches:
-      - main  # rama principal de tu repo
+      - main
 
 jobs:
   build-and-deploy:
@@ -20,16 +20,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./portfolio  # <-- Aquí
 
       - name: Build site
         run: npm run build
+        working-directory: ./portfolio  # <-- Aquí
 
       - name: Create .nojekyll file
         run: echo "" > ./dist/.nojekyll
+        working-directory: ./portfolio  # <-- Aquí
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./dist
+          publish_dir: ./portfolio/dist  # <-- Aquí también
