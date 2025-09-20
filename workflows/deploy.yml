@@ -3,7 +3,7 @@ name: Deploy Astro to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Cambia si usas otra rama principal
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18'  # O la versión que uses
 
       - name: Install dependencies
         run: npm install
@@ -24,11 +24,12 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Disable Jekyll on GitHub Pages
+      - name: Disable Jekyll (important!)
         run: echo "" > ./dist/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_branch: gh-pages  # Rama donde se publicarán los archivos
+          publish_dir: ./dist       # Carpeta con los archivos estáticos
