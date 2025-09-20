@@ -12,6 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+           github_token: ${{ secrets.PAT_TOKEN }}  # <-- Aquí usa el PAT
+        publish_branch: gh-pages
+        publish_dir: ./portfolio/dist
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
