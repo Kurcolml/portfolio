@@ -1,3 +1,4 @@
+/* ===== Tu CSS original ===== */
 .about-container {
   display: flex;
   align-items: center;
@@ -5,7 +6,7 @@
 }
 
 .about-photo {
-   width: 220px;
+  width: 220px;
   height: 220px;
   object-fit: cover;
   border-radius: 80%;
@@ -13,7 +14,6 @@
   box-shadow: 0 0 32px 8px #8f5cff88, 0 2px 8px rgba(79,140,255,0.12);
   transition: box-shadow 0.4s, border-color 0.4s;
 }
-  /* Animación de aura violeta en la foto */
 
 .about-photo:hover {
   border-color: #a259ff;
@@ -21,24 +21,8 @@
     0 0 40px 16px #a259ffcc,
     0 0 80px 32px #8f5cff88,
     0 0 120px 40px #a259ff44;
-  
-  
+  animation: fire-aura 2s infinite ease-in-out;
 }
-    
-/*main:has(.about-photo:hover) {
-  background: radial-gradient(circle at center, #a259ff 0%, #353536 100%);
-  transition: background 0.1s;
-  
-}*/
-.about-photo:hover {
-    animation: fire-aura 2s infinite ease-in-out;
-  }
-  /*
-body:has(.about-photo:hover) {
-  background: radial-gradient(circle at center, #a259ff 0%, #353536 100%);
-  transition: background 0.4s;
-  
-}*/
 
 @keyframes fire-aura {
   0% {
@@ -64,144 +48,134 @@ body:has(.about-photo:hover) {
 .about-text {
   flex: 1;
 }
+
 html, body {
-        height: 100%;
-      }
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        background: #353536;
-        color: #222;
-        font-family: 'Segoe UI', Arial, sans-serif;
-      }
-     
+  height: 100%;
+}
 
-
-
-     main {
-   display: flex;
+body {
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  gap: 2rem;                  /* controla el espacio entre sections */
+  margin: 0;
+  background: #353536;
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: none;           /* deja que cada section maneje su fondo */
+  background: none;
   border-radius: 0;
-  box-shadow: none;   /* opcional */
+  box-shadow: none;
 }
-      footer {
-        background: #222;
-        color: #fff;
-        text-align: center;
-        padding: 1rem 0;
-        border-top: 4px solid #4f8cff;
-        margin-top: 0;
-      }
 
-      header {
-        background: #222;
-        color: #fff;
-        padding: 2rem 0 1rem 0;
-        text-align: center;
-        border-bottom: 4px solid #4f8cff;
-      }
-       header p {
-       
-        font-weight: bold; /* Pone el texto en negrita */
-        font-size: 1.5em; /* Aumenta el tamaño de la fuente */
-        margin-bottom: 10px; /* Agrega un espacio debajo del párrafo */
-    }
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-      }
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        transition: color 0.3s, transform 0.3s;
-        cursor: pointer;
-      }
-      h1:hover {
-        color: #ffffff;
-        transform: scale(1.08) rotate(-2deg);
-        text-shadow: 0 0 12px #d62976;
-      }
-      h2 {
-        color: #4f8cff;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-      }
-     
-     
-      section {
-         
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 4px solid #4f8cff;
+  margin-top: 0;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  border-bottom: 4px solid #4f8cff;
+}
+
+header p {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+h1:hover {
+  color: #ffffff;
+  transform: scale(1.08) rotate(-2deg);
+  text-shadow: 0 0 12px #d62976;
+}
+
+h2 {
+  color: #4f8cff;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+section {
   background-color: var(--section-bg);
   color: var(--section-text);
   padding: 2rem;
   border-radius: 12px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 0;            /* quita márgenes */
-      }
-      ul {
-        padding-left: 1.2rem;
-      }
-      li {
-        margin-bottom: 0.5rem;
-      }
-      footer {
-        background: #222;
-        color: #fff;
-        text-align: center;
-        padding: 1rem 0;
-        border-top: 4px solid #4f8cff;
-        margin-top: 0;
-      }
-      a {
-        color: #4f8cff;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-        color: #222;
-      }
+  margin: 0;
+}
 
-     /* botones */ 
-     .email-copy-container {
-    display: flex;
-    align-items: center;
-    font-family: sans-serif;
-    margin-top: 2rem;
-  }
+ul {
+  padding-left: 1.2rem;
+}
 
-  #copy-btn {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #7c3aed;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+li {
+  margin-bottom: 0.5rem;
+}
 
-  #copy-btn:hover {
-    background-color: #5b21b6;
-  }
-  
+a {
+  color: #4f8cff;
+  text-decoration: none;
+}
 
-  /* Estilo switch  */
+a:hover {
+  text-decoration: underline;
+  color: #222;
+}
+
+.email-copy-container {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 2rem;
+}
+
+#copy-btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#copy-btn:hover {
+  background-color: #5b21b6;
+}
+
 :root {
   --bg-color: #f5f7fa;
   --text-color: #222;
-  --section-bg: #ffffff; /* fondo claro para sections */
+  --section-bg: #ffffff;
   --section-text: #222222;
 }
 
 .dark {
   --bg-color: #121212;
   --text-color: #f5f7fa;
-  --section-bg: #1e1e1e; /* fondo oscuro para sections */
+  --section-bg: #1e1e1e;
   --section-text: #f5f7fa;
 }
 
@@ -211,6 +185,62 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ===== MEDIA QUERIES PARA CELULARES ===== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .about-photo {
+    width: 160px;
+    height: 160px;
+  }
 
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
 
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .email-copy-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #copy-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
