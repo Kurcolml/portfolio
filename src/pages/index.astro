@@ -5,10 +5,15 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Inicio">
 
+  <!-- Sobre mí -->
   <section>
     <h2>Sobre mí</h2>
     <div class="about-container">
-      <img src={`${import.meta.env.BASE_URL}images/foto.jpg`} alt="Foto de Manuel Blanco" class="about-photo" />
+      <img 
+        src={`${import.meta.env.BASE_URL}images/foto.jpg`} 
+        alt="Foto de Manuel Blanco" 
+        class="about-photo" 
+      />
       <div class="about-text">
         <p>
           Egresado de la carrera de Técnico en Programación y Sistemas (UTN), con formación complementaria en 
@@ -22,14 +27,20 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Proyectos -->
   <section>
     <h2>Proyectos</h2>
     <ul>
-      <li><strong>Gestor de tareas web:</strong> Aplicación para organizar tareas con autenticación y base de datos.</li>
-      <li><strong>API REST para e-commerce:</strong> Backend robusto para tiendas online con Node.js y MongoDB.</li>
+      <li>
+        <strong>Gestor de tareas web:</strong> Aplicación para organizar tareas con autenticación y base de datos.
+      </li>
+      <li>
+        <strong>API REST para e-commerce:</strong> Backend robusto para tiendas online con Node.js y MongoDB.
+      </li>
     </ul>
   </section>
 
+  <!-- Habilidades -->
   <section>
     <h2>Habilidades</h2>
     <ul>
@@ -42,15 +53,26 @@ import Layout from '../layouts/Layout.astro';
     </ul>
   </section>
 
+  <!-- Contacto -->
   <section>
     <h2>Contacto</h2>
     <div class="email-copy-container">
       <span id="email-text">manuel.blanco.1995@gmail.com</span>
-      <button id="copy-btn">📋 Copiar </button>
+      <button id="copy-btn">📋 Copiar</button>
       <span id="copy-feedback" style="display: none; margin-left: 10px; color: green;">¡Copiado!</span>
     </div>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/manuel-blanco-31bb3b291" target="_blank">https://www.linkedin.com/in/manuelblanco</a></p>
-    <p>GitHub: <a href="https://github.com/Kurcolml" target="_blank">github.com/ManuelBlanco</a></p>
+    <p>
+      LinkedIn: 
+      <a href="https://www.linkedin.com/in/manuel-blanco-31bb3b291" target="_blank">
+        linkedin.com/in/manuel-blanco
+      </a>
+    </p>
+    <p>
+      GitHub: 
+      <a href="https://github.com/Kurcolml" target="_blank">
+        github.com/Kurcolml
+      </a>
+    </p>
 
     <script>
       if (typeof window !== 'undefined') {
